@@ -25,5 +25,6 @@ web:
 
 php:
   image: v0/php-fpm
+  volumes:
+    - .:/usr/share/nginx
 ```
-
