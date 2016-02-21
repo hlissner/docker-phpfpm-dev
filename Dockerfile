@@ -1,7 +1,7 @@
 FROM debian
 MAINTAINER Henrik Lissner <henrik@lissner.net>
 
-RUN apt-get update && apt-get upgrade -y && \
+RUN apt-get update && \
     apt-get install -y php5-fpm php5-mysql php-apc php5-curl php5-gd php5-intl \
                        php5-mcrypt php5-memcache php5-sqlite php5-tidy php5-xmlrpc php5-pgsql \
                        php5-mongo php5-ldap php5-json php5-imagick php5-redis && \
