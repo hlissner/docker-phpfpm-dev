@@ -6,7 +6,7 @@ This is a php-fpm Docker image primed for developing and testing PHP application
 local development environment. Goes best with a webserver companion container (like
 [nginx](https://github.com/hlissner/docker-nginx-dev)).
 
-`docker build -t v0/php-fpm github.com/hlissner/docker-phpfpm-dev`
+`docker build -t v0/php-fpm github.com/vnought/docker-phpfpm-dev`
 
 No configuration is necessary.
 
@@ -18,7 +18,7 @@ web:
   ports:
     - "8080:80"
   volumes:
-    - ./config/nginx.conf:/etc/nginx/conf.d/icanevents.conf
+    - ./config/nginx.conf:/etc/nginx/conf.d/vhost.conf
     - .:/usr/share/nginx
   links:
     - php
