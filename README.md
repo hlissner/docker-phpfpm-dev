@@ -6,15 +6,11 @@ This is a php-fpm Docker image primed for developing and testing PHP application
 local development environment. Goes best with a webserver companion container (like
 [nginx](https://github.com/hlissner/docker-nginx-dev)).
 
-`docker build -t v0/php-fpm github.com/vnought/docker-phpfpm-dev`
-
-No configuration is necessary.
-
 ## Example docker-compose.yml
 
 ```yaml
 web:
-  image: v0/nginx
+  image: vnought/nginx-dev
   ports:
     - "8080:80"
   volumes:
@@ -24,7 +20,7 @@ web:
     - php
 
 php:
-  image: v0/php-fpm
+  image: vnought/phpfpm-dev
   volumes:
     - .:/usr/share/nginx
 ```
